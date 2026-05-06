@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sponsor the 12,000 Free Books Mission | Colour Blindness in Football</title>
+
+  <meta
+    name="description"
+    content="Sponsor free copies of Colour Blindness in Football and help fund awareness of the hidden struggle colour-blind players can face in football."
+  />
+
+  <style>
+    :root {
+      --bg: #06110d;
+      --bg2: #091a13;
+      --panel: rgba(255, 255, 255, 0.075);
+      --panel2: rgba(255, 255, 255, 0.11);
+      --text: #f4fff8;
+      --muted: #b8d4c7;
+      --green: #38e07b;
+      --lime: #b7ff4d;
+      --gold: #ffd166;
+      --orange: #ff8a3d;
+      --blue: #66d9ff;
+      --pink: #ff8bd1;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: rgba(0, 0, 0, 0.35);
+      --max: 1180px;
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 224, 123, 0.23), transparent 35%),
+        radial-gradient(circle at top right, rgba(255, 209, 102, 0.16), transparent 32%),
+        radial-gradient(circle at 60% 28%, rgba(255, 139, 209, 0.12), transparent 26%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 52%, #030806 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(6, 17, 13, 0.84);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 950;
+      letter-spacing: -0.02em;
+    }
+
+    .badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--lime), var(--green));
+      display: grid;
+      place-items: center;
+      color: #06110d;
+      font-weight: 1000;
+      box-shadow: 0 16px 36px rgba(56, 224, 123, 0.23);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0;
+      margin-top: 1px;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .navlinks a {
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .navlinks a:hover { color: white; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 950;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      text-align: center;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--lime), var(--green));
+      color: #04100b;
+      box-shadow: 0 18px 46px rgba(56, 224, 123, 0.24);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #ffe79a, var(--gold));
+      color: #201500;
+      box-shadow: 0 18px 46px rgba(255, 209, 102, 0.18);
+    }
+
+    .btn-dark {
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      border-color: var(--border);
+    }
+
+    .hero {
+      padding: 78px 0 42px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      border: 1px solid rgba(183, 255, 77, 0.22);
+      border-radius: 999px;
+      background: rgba(183, 255, 77, 0.08);
+      color: var(--lime);
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 18px;
+      font-size: clamp(42px, 7vw, 84px);
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    p { margin: 0; }
+
+    .big {
+      font-size: clamp(18px, 2vw, 24px);
+      color: var(--muted);
+      max-width: 790px;
+      margin-bottom: 18px;
+    }
+
+    .highlight { color: var(--lime); font-weight: 950; }
+    .pink { color: var(--pink); font-weight: 950; }
+    .gold { color: var(--gold); font-weight: 950; }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .small-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 790px;
+    }
+
+    .mission-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at top right, rgba(183, 255, 77, 0.14), transparent 35%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.045));
+      padding: 26px;
+      box-shadow: 0 28px 90px var(--shadow);
+    }
+
+    .giant-12 {
+      font-size: clamp(108px, 18vw, 190px);
+      line-height: 0.84;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      background: linear-gradient(135deg, var(--lime), var(--green), #f8ffb5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 10px 0 14px;
+    }
+
+    .stat-label {
+      color: var(--gold);
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 13px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .mini {
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.18);
+      border-radius: 20px;
+      padding: 16px;
+    }
+
+    .mini strong {
+      display: block;
+      font-size: 30px;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .mini span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    section { padding: 42px 0; }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 22px;
+    }
+
+    .section-head p {
+      margin-top: 8px;
+      max-width: 840px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.078), rgba(255, 255, 255, 0.04));
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.18);
+      padding: 24px;
+    }
+
+    .stats-section {
+      padding-top: 18px;
+    }
+
+    .stats-panel {
+      border: 1px solid rgba(183, 255, 77, 0.24);
+      background:
+        radial-gradient(circle at top left, rgba(183, 255, 77, 0.14), transparent 35%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
+      border-radius: 34px;
+      padding: 28px;
+      box-shadow: 0 26px 90px rgba(0,0,0,.22);
+    }
+
+    .stat-card {
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: rgba(0, 0, 0, 0.18);
+      padding: 20px;
+      min-height: 170px;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: clamp(30px, 4.3vw, 48px);
+      line-height: 1;
+      letter-spacing: -0.055em;
+      margin: 10px 0 8px;
+    }
+
+    .stat-card span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .takeaway {
+      margin-top: 18px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 209, 102, 0.32);
+      background: rgba(255, 209, 102, 0.1);
+      color: #ffe9aa;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: 850;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 17px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      background: rgba(183, 255, 77, 0.12);
+      border: 1px solid rgba(183, 255, 77, 0.23);
+      font-size: 22px;
+    }
+
+    .goal-number {
+      font-size: clamp(38px, 6vw, 66px);
+      line-height: 1;
+      font-weight: 1000;
+      letter-spacing: -0.055em;
+      margin: 14px 0 8px;
+    }
+
+    .progress-wrap {
+      height: 18px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin: 18px 0 10px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--green), var(--lime));
+      transition: width 1s ease;
+    }
+
+    .progress-bar.gold { background: linear-gradient(90deg, var(--orange), var(--gold)); }
+    .progress-bar.blue { background: linear-gradient(90deg, var(--blue), var(--green)); }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meaning-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .meaning-number {
+      font-size: clamp(54px, 8vw, 92px);
+      font-weight: 1000;
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+      margin: 8px 0 12px;
+    }
+
+    .meaning-number.green { color: var(--lime); }
+    .meaning-number.pink { color: var(--pink); }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .package {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-height: 100%;
+    }
+
+    .package.featured {
+      border-color: rgba(255, 209, 102, 0.55);
+      box-shadow: 0 26px 80px rgba(255, 209, 102, 0.12);
+    }
+
+    .package.featured::before {
+      content: "POPULAR";
+      position: absolute;
+      top: 16px;
+      right: -38px;
+      background: var(--gold);
+      color: #201500;
+      font-size: 11px;
+      font-weight: 1000;
+      letter-spacing: 0.08em;
+      padding: 6px 44px;
+      transform: rotate(34deg);
+    }
+
+    .package.everyone {
+      border-color: rgba(183, 255, 77, 0.55);
+      background:
+        radial-gradient(circle at top right, rgba(183, 255, 77, 0.14), transparent 35%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.045));
+      box-shadow: 0 26px 80px rgba(56, 224, 123, 0.14);
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(255, 255, 255, 0.09);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .tag.green-tag {
+      color: #dfffca;
+      background: rgba(183, 255, 77, 0.14);
+      border: 1px solid rgba(183, 255, 77, 0.24);
+    }
+
+    .price {
+      font-size: 44px;
+      line-height: 1;
+      font-weight: 1000;
+      letter-spacing: -0.055em;
+      margin-top: 4px;
+    }
+
+    .package ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .package li { margin-bottom: 8px; }
+
+    .package .btn {
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .impact-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .impact-item {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 14px;
+      align-items: start;
+      border: 1px solid var(--border);
+      border-radius: 21px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.048);
+    }
+
+    .impact-item b {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .leaderboard {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .leader-row {
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .rank {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.09);
+      color: var(--lime);
+      font-weight: 1000;
+    }
+
+    .leader-name { font-weight: 950; }
+
+    .leader-note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .leader-amount {
+      font-weight: 1000;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .example-box {
+      border: 1px solid rgba(255, 209, 102, 0.28);
+      background: rgba(255, 209, 102, 0.095);
+      border-radius: 22px;
+      padding: 18px;
+      color: #ffe9aa;
+    }
+
+    .example-box strong { color: white; }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.055);
+      padding: 16px 18px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 950;
+      font-size: 17px;
+    }
+
+    details p {
+      margin-top: 10px;
+      color: var(--muted);
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    .final-cta {
+      border-radius: 34px;
+      border: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top, rgba(183, 255, 77, 0.18), transparent 42%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.04));
+      box-shadow: 0 26px 90px rgba(0, 0, 0, 0.26);
+    }
+
+    .final-cta h2 {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .final-cta p {
+      max-width: 840px;
+      margin: 14px auto 24px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0 46px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer strong { color: white; }
+
+    .watermark {
+      margin-top: 18px;
+      opacity: 0.34;
+      letter-spacing: 0.14em;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 1050px) {
+      .packages { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid,
+      .grid-2,
+      .meaning-grid { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 780px) {
+      .navlinks { display: none; }
+
+      .hero { padding-top: 52px; }
+
+      .grid-3,
+      .grid-4,
+      .packages,
+      .mini-grid { grid-template-columns: 1fr; }
+
+      .section-head { display: block; }
+
+      .section-head .btn { margin-top: 16px; }
+
+      .hero-actions,
+      .hero-actions .btn { width: 100%; }
+
+      .leader-row { grid-template-columns: 44px 1fr; }
+
+      .leader-amount { grid-column: 2; }
+
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="badge">12</div>
+        <div>
+          Colour Blindness in Football
+          <small>Sponsor the Hidden Player</small>
+        </div>
+      </div>
+
+      <nav class="navlinks">
+        <a href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Return to Main Page</a>
+        <a href="#stats">Stats</a>
+        <a href="#goals">Goals</a>
+        <a href="#packages">Packages</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">The 12,000 Free Books Mission</div>
+
+          <h1>Help make the hidden player visible.</h1>
+
+          <p class="big">
+            Colour blindness in football is easy to miss. A mistake can look like a bad pass, poor awareness, nerves or slow decision-making before anyone checks whether the picture was clear.
+          </p>
+
+          <p class="big">
+            The goal is to give away <span class="highlight">12,000 free books</span> and raise <span class="highlight">£200,000</span> to fund free books, awareness marketing, practical resources and colour-blind football education.
+          </p>
+
+          <p class="big">
+            <span class="highlight">12,000</span> represents the 1 in 12 statistic. <span class="pink">£200,000</span> also carries the 1 in 200 girls statistic — because girls can be colour blind too, and when a girl is affected, the football barrier is just as real.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part — Sponsor Any Amount</a>
+            <a class="btn btn-gold" href="#packages">View Sponsor Packages</a>
+            <a class="btn btn-dark" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Return to Main Page</a>
+          </div>
+
+          <p class="small-note">
+            You do not need to be a big business to take part. Any amount can help move the mission forward. Sponsors can choose to be shown publicly, shown as anonymous, or kept private.
+          </p>
+        </div>
+
+        <aside class="mission-card">
+          <div class="stat-label">Why 12,000?</div>
+          <div class="giant-12">12</div>
+
+          <h2>1 in 12 is the number behind the book goal.</h2>
+
+          <p class="muted" style="margin-top: 12px;">
+            Around 1 in 12 male children are commonly estimated to have colour vision deficiency. Girls can be colour blind too. The statistic is smaller, but the football barrier is not smaller when a girl is affected.
+          </p>
+
+          <div class="mini-grid">
+            <div class="mini">
+              <strong>12,000</strong>
+              <span>free books goal: 1 in 12</span>
+            </div>
+
+            <div class="mini">
+              <strong>£200k</strong>
+              <span>funding goal: 1 in 200</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="stats" class="stats-section">
+      <div class="wrap">
+        <div class="stats-panel">
+          <div class="section-head">
+            <div>
+              <h2>The numbers football cannot ignore</h2>
+              <p>
+                These figures show why this mission matters. Colour blindness is not a tiny issue. It is easy to miss, and football uses colour everywhere.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-4">
+            <article class="stat-card">
+              <span>Global scale estimate</span>
+              <strong class="highlight">62.4M</strong>
+              <span>Approximately 62.4 million children and adolescents worldwide may be affected.</span>
+            </article>
+
+            <article class="stat-card">
+              <span>UK under-18 estimate</span>
+              <strong class="gold">634k–636k</strong>
+              <span>Approximately 634,000 to 636,000 UK under-18s may be affected.</span>
+            </article>
+
+            <article class="stat-card">
+              <span>Male children</span>
+              <strong class="highlight">1 in 12</strong>
+              <span>Roughly 8% worldwide. This is the number behind the 12,000 free books goal.</span>
+            </article>
+
+            <article class="stat-card">
+              <span>Female children</span>
+              <strong class="pink">1 in 200</strong>
+              <span>Roughly 0.5% worldwide. Girls can be colour blind too.</span>
+            </article>
+          </div>
+
+          <div class="takeaway">
+            💡 Key takeaway: Despite these high numbers, roughly 80% of these children may remain undiagnosed throughout their primary school years. That means many players may be struggling before anyone knows to check colour vision.
+          </div>
+
+          <p class="small-note">
+            These are awareness estimates, not a diagnosis. A standard eyesight check and a colour vision test are not always the same thing, so parents may need to ask specifically about colour vision testing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="goals">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>The mission goals</h2>
+            <p>Track the funding, the estimated books funded, and the real books actually given away.</p>
+          </div>
+
+          <a class="btn btn-gold" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Help Reach the Goal</a>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Sponsor Funding Goal</h3>
+            <p class="muted">Funding for free books, delivery, awareness marketing and resources.</p>
+
+            <div class="goal-number" id="fundingText">£0 / £200,000</div>
+
+            <div class="progress-wrap">
+              <div class="progress-bar gold" id="fundingBar"></div>
+            </div>
+
+            <div class="progress-meta">
+              <span id="fundingPercent">0% complete</span>
+              <span>Represents 1 in 200</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Books Funded Estimate</h3>
+            <p class="muted">Estimated books funded from sponsor money at £15 average per book.</p>
+
+            <div class="goal-number" id="fundedBooksText">0 / 12,000</div>
+
+            <div class="progress-wrap">
+              <div class="progress-bar" id="fundedBooksBar"></div>
+            </div>
+
+            <div class="progress-meta">
+              <span id="fundedBooksPercent">0% complete</span>
+              <span>£15 average book cost</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Free Books Given Away</h3>
+            <p class="muted">Books actually delivered or given to players, parents, coaches and clubs.</p>
+
+            <div class="goal-number" id="givenBooksText">0 / 12,000</div>
+
+            <div class="progress-wrap">
+              <div class="progress-bar blue" id="givenBooksBar"></div>
+            </div>
+
+            <div class="progress-meta">
+              <span id="givenBooksPercent">0% complete</span>
+              <span>Represents 1 in 12</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="meaning">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Why these numbers matter</h2>
+            <p>The goals are not random. They turn the statistics into a public mission sponsors can understand.</p>
+          </div>
+        </div>
+
+        <div class="meaning-grid">
+          <article class="card">
+            <span class="tag green-tag">Free Books Goal</span>
+            <div class="meaning-number green">12,000</div>
+            <h3>Represents the 1 in 12</h3>
+            <p class="muted" style="margin-top: 10px;">
+              The 12,000 free books goal represents the commonly used estimate that around 1 in 12 males have colour vision deficiency. It also connects to the hidden Number 12 player — the player on the pitch who may be struggling without anyone knowing.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="tag">Funding Goal</span>
+            <div class="meaning-number pink">£200,000</div>
+            <h3>Represents the 1 in 200</h3>
+            <p class="muted" style="margin-top: 10px;">
+              The £200,000 funding goal carries the 1 in 200 girls statistic. Colour blindness is more common in boys, but girls can be colour blind too. When a girl is affected, the barrier is not smaller. She deserves the same visibility, support and dignity.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Why sponsors are needed</h2>
+            <p>This is not just a book campaign. It is an awareness mission for a hidden football problem.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">👀</div>
+            <h3>Colour blindness can be missed</h3>
+            <p class="muted" style="margin-top: 10px;">
+              Many children do not know they see differently. A player can pass a normal eyesight chart and still have a colour vision issue if colour vision is not specifically tested.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">⚽</div>
+            <h3>Football uses colour everywhere</h3>
+            <p class="muted" style="margin-top: 10px;">
+              Kits, bibs, cones, balls, lines, goalkeeper shirts, referee shirts, tactical boards, apps and coaching instructions all rely on colour.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🧠</div>
+            <h3>It can create mental load</h3>
+            <p class="muted" style="margin-top: 10px;">
+              A colour-blind player may spend energy checking colours all game. That can reduce focus, slow decisions, create doubt and waste energy.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Sponsor packages</h2>
+            <p>Every package helps fund free books and awareness. You can sponsor a fixed level or simply take part with any amount.</p>
+          </div>
+        </div>
+
+        <div class="packages">
+          <article class="card package everyone">
+            <span class="tag green-tag">For Everyone</span>
+            <h3>Take Part Sponsor</h3>
+            <div class="price">Any £</div>
+            <p class="muted">For anyone who wants to be part of the mission, even without much money to give.</p>
+            <ul>
+              <li>No big amount needed</li>
+              <li>Every contribution counts</li>
+              <li>Can be public, anonymous or private</li>
+              <li>Helps move the mission forward</li>
+            </ul>
+            <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part — Any Amount</a>
+          </article>
+
+          <article class="card package">
+            <span class="tag">Supporter</span>
+            <h3>Supporter Sponsor</h3>
+            <div class="price">£25</div>
+            <p class="muted">Funds 1 free book plus awareness support.</p>
+            <ul>
+              <li>Helps sponsor 1 free book</li>
+              <li>Supports colour-blind football awareness</li>
+              <li>Can be shown on the sponsor page</li>
+            </ul>
+            <a class="btn btn-primary" href="https://buy.stripe.com/00w7sEgAJgb27ps24UejK02" target="_blank" rel="noopener">Sponsor £25</a>
+          </article>
+
+          <article class="card package">
+            <span class="tag">Bronze</span>
+            <h3>Bronze Sponsor</h3>
+            <div class="price">£100</div>
+            <p class="muted">Funds around 6 free books plus awareness support.</p>
+            <ul>
+              <li>Helps sponsor around 6 books</li>
+              <li>Good for local supporters</li>
+              <li>Can be listed on the leaderboard</li>
+            </ul>
+            <a class="btn btn-primary" href="https://buy.stripe.com/bJe6oAesBf6Y5hkcJyejK03" target="_blank" rel="noopener">Sponsor £100</a>
+          </article>
+
+          <article class="card package">
+            <span class="tag">Silver</span>
+            <h3>Silver Sponsor</h3>
+            <div class="price">£250</div>
+            <p class="muted">Funds around 16 free books plus awareness support.</p>
+            <ul>
+              <li>Helps reach teams and clubs</li>
+              <li>Supports a stronger awareness push</li>
+              <li>Can show name, business or URL</li>
+            </ul>
+            <a class="btn btn-primary" href="https://buy.stripe.com/aFa28k7091g8aBE10QejK04" target="_blank" rel="noopener">Sponsor £250</a>
+          </article>
+
+          <article class="card package featured">
+            <span class="tag">Gold</span>
+            <h3>Gold Sponsor</h3>
+            <div class="price">£500</div>
+            <p class="muted">Funds around 33 free books plus awareness support.</p>
+            <ul>
+              <li>Creates serious local impact</li>
+              <li>Helps reach football communities</li>
+              <li>Strong leaderboard sponsor level</li>
+            </ul>
+            <a class="btn btn-gold" href="https://buy.stripe.com/bJedR2esBf6Y9xAgZOejK05" target="_blank" rel="noopener">Sponsor £500</a>
+          </article>
+
+          <article class="card package">
+            <span class="tag">Platinum</span>
+            <h3>Platinum Sponsor</h3>
+            <div class="price">£1,000</div>
+            <p class="muted">Funds around 66 free books plus awareness support.</p>
+            <ul>
+              <li>Major support for the mission</li>
+              <li>Helps reach clubs and academies</li>
+              <li>High leaderboard visibility</li>
+            </ul>
+            <a class="btn btn-primary" href="https://buy.stripe.com/cNi00cesBgb2bFIaBqejK06" target="_blank" rel="noopener">Sponsor £1,000</a>
+          </article>
+
+          <article class="card package">
+            <span class="tag">Legacy</span>
+            <h3>Legacy Sponsor</h3>
+            <div class="price">£2,000</div>
+            <p class="muted">Funds around 133 free books plus awareness support.</p>
+            <ul>
+              <li>Powerful mission-building support</li>
+              <li>Helps fund a bigger awareness push</li>
+              <li>Major sponsor recognition available</li>
+            </ul>
+            <a class="btn btn-gold" href="https://buy.stripe.com/9B69AM0BL2kcbFI10QejK07" target="_blank" rel="noopener">Sponsor £2,000</a>
+          </article>
+
+          <article class="card package">
+            <span class="tag">Founding</span>
+            <h3>Founding Sponsor</h3>
+            <div class="price">£5,000</div>
+            <p class="muted">Funds around 333 free books plus awareness support.</p>
+            <ul>
+              <li>Headline sponsor-level impact</li>
+              <li>Helps scale the 12,000 book mission</li>
+              <li>Featured recognition available</li>
+            </ul>
+            <a class="btn btn-gold" href="https://buy.stripe.com/eVq5kw0BL1g86loeRGejK08" target="_blank" rel="noopener">Sponsor £5,000</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="leaderboard">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Sponsor leaderboard</h2>
+            <p>Sponsors can compete to fund more free books and more awareness. Public sponsors can be shown with name, business, URL and amount.</p>
+          </div>
+
+          <a class="btn btn-gold" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Climb the Leaderboard</a>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Top 12 Sponsors</h3>
+            <p class="muted" style="margin-top: 8px;">
+              The Top 12 represents the hidden player and the 1 in 12 statistic behind the mission.
+            </p>
+
+            <div class="leaderboard" id="leaderboardList"></div>
+          </article>
+
+          <article class="card">
+            <h3>How sponsors can be shown</h3>
+            <p class="muted" style="margin-top: 8px;">
+              At checkout, sponsors can choose how their sponsorship appears on the page.
+            </p>
+
+            <div class="impact-list" style="margin-top: 16px;">
+              <div class="impact-item">
+                <div class="icon">📣</div>
+                <div>
+                  <b>Public</b>
+                  <span>Show name, business or URL plus sponsor amount.</span>
+                </div>
+              </div>
+
+              <div class="impact-item">
+                <div class="icon">🕶️</div>
+                <div>
+                  <b>Anonymous</b>
+                  <span>Show as Anonymous Sponsor plus sponsor amount.</span>
+                </div>
+              </div>
+
+              <div class="impact-item">
+                <div class="icon">🔒</div>
+                <div>
+                  <b>Private</b>
+                  <span>Do not show the sponsor on the public sponsor page.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-box" style="margin-top: 16px;">
+              <strong>EXAMPLE RESULT ON SPONSOR PAGE:</strong><br />
+              John Smith — £25<br />
+              ABC Football Club — £100<br />
+              www.example.com — £250<br />
+              Anonymous Sponsor — £500
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="money">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>What sponsor money goes towards</h2>
+            <p>Sponsor money helps turn this into real-world awareness, education and support.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>The main promise</h3>
+
+            <p class="muted" style="margin-top: 10px;">
+              Sponsor funding helps buy free copies of <em>Colour Blindness in Football</em> and supports the wider mission to raise awareness of colour blindness in football.
+            </p>
+
+            <div class="goal-number">£15</div>
+
+            <p class="muted">
+              Average book cost used for the sponsor calculations. Larger sponsor targets also help cover awareness, delivery, resources, promotion and running costs.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Sponsor Any Amount</a>
+            </div>
+          </article>
+
+          <div class="impact-list">
+            <div class="impact-item">
+              <div class="icon">📚</div>
+              <div>
+                <b>Free books</b>
+                <span>Buying copies so they can be given away to players, parents, coaches, clubs, schools and academies.</span>
+              </div>
+            </div>
+
+            <div class="impact-item">
+              <div class="icon">📦</div>
+              <div>
+                <b>Delivery and distribution</b>
+                <span>Helping get the books to the people and football communities who need them.</span>
+              </div>
+            </div>
+
+            <div class="impact-item">
+              <div class="icon">📣</div>
+              <div>
+                <b>Marketing and awareness</b>
+                <span>Creating campaigns, posts, QR codes, flyers, videos and outreach that explain the hidden struggle clearly.</span>
+              </div>
+            </div>
+
+            <div class="impact-item">
+              <div class="icon">🎮</div>
+              <div>
+                <b>Free tools and games</b>
+                <span>Supporting online colour-blind football resources that teach players and coaches not to rely on colour alone.</span>
+              </div>
+            </div>
+
+            <div class="impact-item">
+              <div class="icon">🌍</div>
+              <div>
+                <b>Bigger awareness mission</b>
+                <span>Helping people understand that colour confusion is not a rare excuse. It is a hidden design problem — and design problems can be changed.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Questions sponsors may ask</h2>
+            <p>Clear answers help sponsors trust the mission.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Why is the goal 12,000 books?</summary>
+            <p>The number 12 represents the commonly used estimate that around 1 in 12 males have colour vision deficiency. It also connects to the hidden Number 12 player theme in the mission.</p>
+          </details>
+
+          <details>
+            <summary>Why is the funding goal £200,000?</summary>
+            <p>At an average book cost of £15, 12,000 books equals £180,000. The £200,000 goal gives extra room for delivery, payment fees, awareness marketing, resources, website costs and unexpected costs. It also carries the 1 in 200 girls statistic, reminding people that girls can be colour blind too.</p>
+          </details>
+
+          <details>
+            <summary>Can I take part if I cannot give much?</summary>
+            <p>Yes. The Take Part Sponsor option is for everyone. Even a small contribution helps move the mission forward and shows that this issue matters.</p>
+          </details>
+
+          <details>
+            <summary>Can sponsors stay anonymous?</summary>
+            <p>Yes. Sponsors can choose public, anonymous or private when paying. Public sponsors may be listed with their name, business, URL and amount. Anonymous sponsors can be shown as Anonymous Sponsor. Private sponsors are not shown publicly.</p>
+          </details>
+
+          <details>
+            <summary>Is this only for boys?</summary>
+            <p>No. Colour blindness is more common in boys, but girls can be colour blind too. When a girl is affected, the football barrier is just as real and deserves the same support, dignity and visibility.</p>
+          </details>
+
+          <details>
+            <summary>What is the practical message?</summary>
+            <p>Do not rely on colour alone when something important must be understood quickly. Football needs clearer cues, better awareness and practical support for players who see colour differently.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="final-cta">
+          <h2>You do not need to be a big sponsor to help the hidden player.</h2>
+
+          <p>
+            Sponsor free books. Fund awareness. Take part with any amount. Help players, parents, coaches, clubs and academies understand colour blindness in football before another player is misjudged for a picture they could not clearly see.
+          </p>
+
+          <div class="hero-actions" style="justify-content: center;">
+            <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part — Sponsor Any Amount</a>
+            <a class="btn btn-gold" href="https://buy.stripe.com/eVq5kw0BL1g86loeRGejK08" target="_blank" rel="noopener">Become a Founding Sponsor</a>
+            <a class="btn btn-dark" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Return to Main Page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <strong>Colour Blindness in Football</strong> by Cornelius Aurelius<br />
+      Sponsor mission: free books, better awareness and practical support for colour-blind players, parents, coaches and clubs.
+      <div class="watermark">CORNELIUSAURELIUS.COM</div>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      UPDATE THESE NUMBERS MANUALLY WHEN NEEDED:
+
+      fundingRaised = total sponsor money raised.
+      booksGivenAway = books actually delivered/given away.
+
+      Books funded estimate is calculated from fundingRaised / averageBookCost.
+    */
+
+    const fundingGoal = 200000;
+    const booksGoal = 12000;
+    const averageBookCost = 15;
+
+    const fundingRaised = 0;
+    const booksGivenAway = 0;
+
+    /*
+      EDIT THIS LEADERBOARD WHEN SPONSORS JOIN.
+
+      Examples:
+      { name: "John Smith", amount: 25, note: "Supporter Sponsor" }
+      { name: "ABC Football Club", amount: 100, note: "Bronze Sponsor" }
+      { name: "www.example.com", amount: 250, note: "Silver Sponsor" }
+      { name: "Anonymous Sponsor", amount: 500, note: "Gold Sponsor" }
+    */
+
+    const leaderboardSponsors = [
+      { name: "Be the first sponsor", amount: 0, note: "Top position available" },
+      { name: "Your business here", amount: 0, note: "Sponsor the hidden player" },
+      { name: "Anonymous Sponsor", amount: 0, note: "Private support welcome" }
+    ];
+
+    function money(value) {
+      return new Intl.NumberFormat("en-GB", {
+        style: "currency",
+        currency: "GBP",
+        maximumFractionDigits: 0
+      }).format(value);
+    }
+
+    function number(value) {
+      return new Intl.NumberFormat("en-GB").format(value);
+    }
+
+    function percent(value, goal) {
+      if (!goal) return 0;
+      return Math.min(100, Math.max(0, (value / goal) * 100));
+    }
+
+    function updateProgress() {
+      const fundedBooks = Math.floor(fundingRaised / averageBookCost);
+
+      const fundingPct = percent(fundingRaised, fundingGoal);
+      const fundedBooksPct = percent(fundedBooks, booksGoal);
+      const givenBooksPct = percent(booksGivenAway, booksGoal);
+
+      document.getElementById("fundingText").textContent = `${money(fundingRaised)} / ${money(fundingGoal)}`;
+      document.getElementById("fundedBooksText").textContent = `${number(fundedBooks)} / ${number(booksGoal)}`;
+      document.getElementById("givenBooksText").textContent = `${number(booksGivenAway)} / ${number(booksGoal)}`;
+
+      document.getElementById("fundingPercent").textContent = `${fundingPct.toFixed(1)}% complete`;
+      document.getElementById("fundedBooksPercent").textContent = `${fundedBooksPct.toFixed(1)}% complete`;
+      document.getElementById("givenBooksPercent").textContent = `${givenBooksPct.toFixed(1)}% complete`;
+
+      requestAnimationFrame(() => {
+        document.getElementById("fundingBar").style.width = `${fundingPct}%`;
+        document.getElementById("fundedBooksBar").style.width = `${fundedBooksPct}%`;
+        document.getElementById("givenBooksBar").style.width = `${givenBooksPct}%`;
+      });
+    }
+
+    function renderLeaderboard() {
+      const list = document.getElementById("leaderboardList");
+
+      const sorted = [...leaderboardSponsors]
+        .sort((a, b) => b.amount - a.amount)
+        .slice(0, 12);
+
+      list.innerHTML = sorted.map((sponsor, index) => {
+        const amountText = sponsor.amount > 0 ? money(sponsor.amount) : "Open";
+        return `
+          <div class="leader-row">
+            <div class="rank">${index + 1}</div>
+            <div>
+              <div class="leader-name">${sponsor.name}</div>
+              <div class="leader-note">${sponsor.note || "Sponsor supporter"}</div>
+            </div>
+            <div class="leader-amount">${amountText}</div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    updateProgress();
+    renderLeaderboard();
+  </script>
+</body>
+</html>
