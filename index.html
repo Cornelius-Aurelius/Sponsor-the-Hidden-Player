@@ -4,24 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Build Social Proof First | Colour Blindness in Football Sponsors</title>
+  <title>Business Awareness Wall | Colour Blindness in Football</title>
 
   <meta
     name="description"
-    content="Build social proof and credibility for the Colour Blindness in Football mission before asking for sponsors. The 12,000 Pixel Website lets businesses show awareness first without spending money."
+    content="A public awareness page for the Colour Blindness in Football mission by Cornelius Aurelius. See the 12,000 Pixel Website, support free books, and help make colour-blind players visible."
   />
-
   <meta name="author" content="Cornelius Aurelius" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#06110d" />
 
-  <meta property="og:title" content="Build Social Proof First | Colour Blindness in Football" />
-  <meta property="og:description" content="The 12,000 Pixel Website helps businesses show awareness first, creating social proof and credibility before sponsor conversations begin." />
+  <meta property="og:title" content="Business Awareness Wall | Colour Blindness in Football" />
+  <meta property="og:description" content="Businesses, clubs and community supporters can stand with the Colour Blindness in Football mission and help make the hidden player visible." />
   <meta property="og:type" content="website" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Build Social Proof First | Colour Blindness in Football" />
-  <meta name="twitter:description" content="Businesses can help the Colour Blindness in Football project without spending money first by appearing on the 12,000 Pixel Website social proof wall." />
+  <meta name="twitter:title" content="Business Awareness Wall | Colour Blindness in Football" />
+  <meta name="twitter:description" content="Stand with the Colour Blindness in Football mission. Help make colour-blind players visible." />
 
   <style>
     :root {
@@ -29,19 +28,15 @@
       --bg2: #091a13;
       --deep: #030806;
       --panel: rgba(255, 255, 255, 0.075);
-      --panel2: rgba(255, 255, 255, 0.11);
       --text: #f4fff8;
       --muted: #b8d4c7;
-      --soft: #eafff1;
       --green: #38e07b;
       --lime: #b7ff4d;
       --gold: #ffd166;
       --orange: #ff8a3d;
       --blue: #66d9ff;
       --pink: #ff8bd1;
-      --red: #ff5d6c;
       --border: rgba(255, 255, 255, 0.14);
-      --border-strong: rgba(183, 255, 77, 0.32);
       --shadow: rgba(0, 0, 0, 0.35);
       --max: 1180px;
       --radius: 26px;
@@ -49,10 +44,7 @@
 
     * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-      text-size-adjust: 100%;
-    }
+    html { scroll-behavior: smooth; text-size-adjust: 100%; }
 
     body {
       margin: 0;
@@ -68,12 +60,11 @@
     }
 
     a { color: inherit; }
+    p { margin: 0; }
 
-    img, svg { max-width: 100%; }
-
-    ::selection {
-      background: rgba(183, 255, 77, 0.3);
-      color: white;
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
     }
 
     .skip-link {
@@ -92,16 +83,11 @@
 
     .skip-link:focus { top: 16px; }
 
-    .wrap {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-    }
-
     .topbar {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(6, 17, 13, 0.84);
+      background: rgba(6, 17, 13, 0.86);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
@@ -191,8 +177,8 @@
     .btn:hover { transform: translateY(-2px); }
 
     .btn:focus-visible,
-    details:focus-within,
-    a:focus-visible {
+    a:focus-visible,
+    details:focus-within {
       outline: 3px solid rgba(183, 255, 77, 0.78);
       outline-offset: 4px;
     }
@@ -275,8 +261,6 @@
       letter-spacing: -0.025em;
     }
 
-    p { margin: 0; }
-
     .big {
       font-size: clamp(18px, 2vw, 24px);
       color: var(--muted);
@@ -288,6 +272,7 @@
     .pink { color: var(--pink); font-weight: 950; }
     .gold { color: var(--gold); font-weight: 950; }
     .blue { color: var(--blue); font-weight: 950; }
+    .muted { color: var(--muted); }
 
     .hero-actions {
       display: flex;
@@ -314,18 +299,6 @@
       padding: 26px;
       box-shadow: 0 28px 90px var(--shadow);
       isolation: isolate;
-    }
-
-    .mission-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -70px -90px auto;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: rgba(255, 209, 102, 0.12);
-      filter: blur(2px);
-      z-index: -1;
     }
 
     .circle-12 {
@@ -376,8 +349,6 @@
       font-size: 13px;
     }
 
-    .muted { color: var(--muted); }
-
     .mini-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -407,9 +378,9 @@
       font-weight: 750;
     }
 
-    .notice-strip {
-      padding: 16px 0 0;
-    }
+    section { padding: 42px 0; }
+
+    .notice-strip { padding: 16px 0 0; }
 
     .notice-card {
       display: flex;
@@ -429,8 +400,6 @@
       font-size: 18px;
       margin-bottom: 3px;
     }
-
-    section { padding: 42px 0; }
 
     .section-head {
       display: flex;
@@ -473,16 +442,26 @@
       padding: 24px;
     }
 
-    .stats-section { padding-top: 18px; }
+    .stats-panel,
+    .pixel-section-card {
+      border-radius: 34px;
+      padding: 28px;
+      box-shadow: 0 26px 90px rgba(0,0,0,.22);
+    }
 
     .stats-panel {
       border: 1px solid rgba(183, 255, 77, 0.24);
       background:
         radial-gradient(circle at top left, rgba(183, 255, 77, 0.14), transparent 35%),
         linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
-      border-radius: 34px;
-      padding: 28px;
-      box-shadow: 0 26px 90px rgba(0,0,0,.22);
+    }
+
+    .pixel-section-card {
+      border: 1px solid rgba(102, 217, 255, 0.28);
+      background:
+        radial-gradient(circle at top left, rgba(102, 217, 255, 0.16), transparent 36%),
+        radial-gradient(circle at bottom right, rgba(183, 255, 77, 0.11), transparent 34%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
     }
 
     .stat-card {
@@ -566,6 +545,44 @@
       color: var(--muted);
       font-size: 14px;
     }
+
+    .pixel-grid {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .pixel-preview {
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,.22);
+      border-radius: 28px;
+      padding: 18px;
+    }
+
+    .pixel-board {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 4px;
+      aspect-ratio: 1;
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255,255,255,.08);
+      padding: 8px;
+    }
+
+    .pixel {
+      border-radius: 5px;
+      min-width: 0;
+      background: rgba(255,255,255,.1);
+    }
+
+    .pixel:nth-child(6n+1) { background: rgba(183,255,77,.75); }
+    .pixel:nth-child(6n+2) { background: rgba(56,224,123,.72); }
+    .pixel:nth-child(6n+3) { background: rgba(255,209,102,.78); }
+    .pixel:nth-child(6n+4) { background: rgba(102,217,255,.72); }
+    .pixel:nth-child(6n+5) { background: rgba(255,139,209,.68); }
+    .pixel:nth-child(6n+6) { background: rgba(255,138,61,.74); }
 
     .meaning-grid {
       display: grid;
@@ -668,57 +685,7 @@
 
     .package li,
     .clean-list li { margin-bottom: 8px; }
-
     .package .btn { margin-top: auto; width: 100%; }
-
-    .pixel-section-card {
-      border-radius: 34px;
-      border: 1px solid rgba(102, 217, 255, 0.28);
-      background:
-        radial-gradient(circle at top left, rgba(102, 217, 255, 0.16), transparent 36%),
-        radial-gradient(circle at bottom right, rgba(183, 255, 77, 0.11), transparent 34%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
-      padding: 28px;
-      box-shadow: 0 26px 90px rgba(0,0,0,.22);
-    }
-
-    .pixel-grid {
-      display: grid;
-      grid-template-columns: 0.86fr 1.14fr;
-      gap: 22px;
-      align-items: center;
-    }
-
-    .pixel-preview {
-      border: 1px solid var(--border);
-      background: rgba(0,0,0,.22);
-      border-radius: 28px;
-      padding: 18px;
-    }
-
-    .pixel-board {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 4px;
-      aspect-ratio: 1;
-      border-radius: 22px;
-      overflow: hidden;
-      background: rgba(255,255,255,.08);
-      padding: 8px;
-    }
-
-    .pixel {
-      border-radius: 5px;
-      min-width: 0;
-      background: rgba(255,255,255,.1);
-    }
-
-    .pixel:nth-child(6n+1) { background: rgba(183,255,77,.75); }
-    .pixel:nth-child(6n+2) { background: rgba(56,224,123,.72); }
-    .pixel:nth-child(6n+3) { background: rgba(255,209,102,.78); }
-    .pixel:nth-child(6n+4) { background: rgba(102,217,255,.72); }
-    .pixel:nth-child(6n+5) { background: rgba(255,139,209,.68); }
-    .pixel:nth-child(6n+6) { background: rgba(255,138,61,.74); }
 
     .impact-list {
       display: grid;
@@ -875,10 +842,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
     }
 
     @media (max-width: 1050px) {
@@ -903,17 +867,13 @@
       .grid-4,
       .packages,
       .mini-grid { grid-template-columns: 1fr; }
-
       .section-head { display: block; }
       .section-head .btn { margin-top: 16px; }
-
       .hero-actions,
       .hero-actions .btn,
       .btn { width: 100%; }
-
       .leader-row { grid-template-columns: 44px 1fr; }
       .leader-amount { grid-column: 2; }
-
       .stat-card { min-height: auto; }
       .stats-panel,
       .pixel-section-card { padding: 20px; border-radius: 26px; }
@@ -936,11 +896,11 @@
 
   <header class="topbar">
     <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="Colour Blindness in Football sponsor mission home">
+      <a class="brand" href="#top" aria-label="Colour Blindness in Football awareness wall home">
         <div class="badge">12</div>
         <div>
           Colour Blindness in Football
-          <small>Social Proof → Credibility → Sponsors</small>
+          <small>Business Awareness Wall</small>
         </div>
       </a>
 
@@ -949,8 +909,8 @@
         <a href="#stats">Stats</a>
         <a href="#goals">Goals</a>
         <a href="#packages">Packages</a>
-        <a class="nav-pill" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">🧩 Social Proof Wall</a>
-        <a class="btn btn-primary btn-small" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part</a>
+        <a class="nav-pill" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">🧩 12,000 Pixel Website</a>
+        <a class="btn btn-primary btn-small" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Support Free Books</a>
       </nav>
     </div>
   </header>
@@ -959,31 +919,31 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">Social Proof First</div>
+          <div class="eyebrow">Business Awareness Wall</div>
 
-          <h1>Build credibility before asking for sponsors.</h1>
+          <h1>Show the football world this issue is being noticed.</h1>
 
           <p class="big">
-            The 12,000 Pixel Website is the first step. It lets businesses show they are aware of the Colour Blindness in Football project before any money is requested.
+            The 12,000 Pixel Website is a public awareness wall for businesses, clubs and community supporters who want to stand with the Colour Blindness in Football mission.
           </p>
 
           <p class="big">
-            The logic is simple: <span class="highlight">build social proof</span>, build credibility, then start stronger sponsor conversations for the <span class="highlight">12,000 free books</span> mission.
+            Every visible supporter helps the message travel further: colour blindness in football is real, easy to miss, and worth taking seriously.
           </p>
 
           <p class="big">
-            When a sponsor sees that other businesses already know about the project, the mission feels more real, more trusted and easier to support.
+            Paid sponsorship is separate and optional. The awareness wall gives people a simple way to support the message, while the free-books mission helps fund practical resources for players, parents, coaches and clubs.
           </p>
 
           <div class="hero-actions">
             <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">View the 12,000 Pixel Website</a>
-            <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Sponsor Any Amount</a>
+            <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Support Free Books</a>
             <a class="btn btn-gold" href="#packages">View Sponsor Packages</a>
             <a class="btn btn-dark" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Read the Book Page</a>
           </div>
 
           <p class="small-note">
-            Start with awareness first. A business can appear on the 12,000 Pixel Website without spending money, which helps create the proof needed before bigger sponsor asks.
+            Businesses can stand with the mission through the 12,000 Pixel Website. Paid sponsorship is a separate option for anyone who wants to help fund free books.
           </p>
         </div>
 
@@ -994,10 +954,10 @@
             <strong>12</strong>
           </div>
 
-          <h2>The hidden 12 becomes easier to fund when people can see support already exists.</h2>
+          <h2>The hidden 12 becomes harder to ignore when more people stand with the mission.</h2>
 
           <p class="muted" style="margin-top: 12px;">
-            The 12,000 Pixel Website gives businesses a no-cost way to stand near the mission first. That public awareness can then make paid sponsorship conversations warmer, easier and more believable.
+            The 12,000 Pixel Website gives businesses, clubs and community supporters a simple public way to recognise the issue and stand beside the project.
           </p>
 
           <div class="mini-grid">
@@ -1007,8 +967,8 @@
             </div>
 
             <div class="mini">
-              <strong>3 steps</strong>
-              <span>proof, trust, sponsorship</span>
+              <strong>3 ways</strong>
+              <span>awareness, support, action</span>
             </div>
           </div>
         </aside>
@@ -1019,8 +979,8 @@
       <div class="wrap">
         <div class="notice-card">
           <div>
-            <strong>Step one: businesses can help without spending money.</strong>
-            <p class="muted">The 12,000 Pixel Website is a credibility wall. Each reviewed business presence helps show the project is active, noticed and worth taking seriously.</p>
+            <strong>Businesses can stand with the mission.</strong>
+            <p class="muted">The 12,000 Pixel Website is an awareness wall. Each reviewed supporter helps show that colour blindness in football is being noticed by real people and organisations.</p>
           </div>
           <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">View the 12,000 Pixel Website</a>
         </div>
@@ -1076,12 +1036,67 @@
       </div>
     </section>
 
+    <section id="pixel-website">
+      <div class="wrap">
+        <div class="pixel-section-card">
+          <div class="pixel-grid">
+            <div class="pixel-preview" aria-hidden="true">
+              <div class="pixel-board" id="pixelBoard"></div>
+            </div>
+
+            <div>
+              <span class="tag blue-tag">Awareness Supporter</span>
+              <h2 style="margin-top: 12px;">The 12,000 Pixel Website is a public wall of awareness supporters.</h2>
+              <p class="big" style="margin-top: 14px;">
+                A business, club or community supporter can appear on the Pixel Website to show they recognise the issue and support better awareness for colour-blind players.
+              </p>
+
+              <div class="impact-list" style="margin-top: 16px;">
+                <div class="impact-item">
+                  <div class="icon">👀</div>
+                  <div>
+                    <b>Awareness</b>
+                    <span>A business can show it recognises that colour blindness in football deserves attention.</span>
+                  </div>
+                </div>
+
+                <div class="impact-item">
+                  <div class="icon">🤝</div>
+                  <div>
+                    <b>Public support</b>
+                    <span>When supporters appear publicly, more parents, coaches and clubs can see that the issue is being taken seriously.</span>
+                  </div>
+                </div>
+
+                <div class="impact-item">
+                  <div class="icon">📚</div>
+                  <div>
+                    <b>Optional next step</b>
+                    <span>Supporters who want to go further can also help fund free books and wider awareness resources.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">Open the 12,000 Pixel Website</a>
+                <a class="btn btn-dark" href="#packages">View Sponsor Packages</a>
+              </div>
+
+              <p class="small-note">
+                Submissions should be reviewed before any business name, logo or link is displayed publicly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="goals">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <h2>The sponsor mission after credibility is built</h2>
-            <p>Once social proof is visible, these are the funding goals sponsors can help move forward.</p>
+            <h2>The free-books sponsor mission</h2>
+            <p>For supporters who want to go further, these are the funding goals that help provide free books and awareness resources.</p>
           </div>
 
           <a class="btn btn-gold" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Help Reach the Goal</a>
@@ -1139,67 +1154,12 @@
       </div>
     </section>
 
-    <section id="pixel-website">
-      <div class="wrap">
-        <div class="pixel-section-card">
-          <div class="pixel-grid">
-            <div class="pixel-preview" aria-hidden="true">
-              <div class="pixel-board" id="pixelBoard"></div>
-            </div>
-
-            <div>
-              <span class="tag blue-tag">No-Cost First Step</span>
-              <h2 style="margin-top: 12px;">The 12,000 Pixel Website is for business awareness, not a money ask.</h2>
-              <p class="big" style="margin-top: 14px;">
-                Before asking a business to sponsor books, the project can ask for something easier: awareness. A reviewed business presence on the Pixel Website helps show that real organisations know this mission exists.
-              </p>
-
-              <div class="impact-list" style="margin-top: 16px;">
-                <div class="impact-item">
-                  <div class="icon">👀</div>
-                  <div>
-                    <b>Awareness</b>
-                    <span>A business can show it has noticed the project without being asked for money first.</span>
-                  </div>
-                </div>
-
-                <div class="impact-item">
-                  <div class="icon">🤝</div>
-                  <div>
-                    <b>Social proof</b>
-                    <span>When businesses appear publicly, new visitors can see the project is not standing alone.</span>
-                  </div>
-                </div>
-
-                <div class="impact-item">
-                  <div class="icon">📈</div>
-                  <div>
-                    <b>Credibility before sponsorship</b>
-                    <span>The wall gives future sponsors a reason to believe the project is active before they are asked to fund it.</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hero-actions">
-                <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">View the 12,000 Pixel Website</a>
-                <a class="btn btn-dark" href="#packages">Next Step: Sponsor Packages</a>
-              </div>
-
-              <p class="small-note">
-                This page should be used before cold sponsor outreach. It gives you a credibility asset to show that businesses are already becoming aware of the mission.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="meaning">
       <div class="wrap">
         <div class="section-head">
           <div>
             <h2>Why these numbers matter</h2>
-            <p>The goals are not random. They turn the statistics into a public mission sponsors can understand.</p>
+            <p>The goals are not random. They turn the statistics into a public mission supporters can understand.</p>
           </div>
         </div>
 
@@ -1229,7 +1189,7 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <h2>Why sponsors are needed</h2>
+            <h2>Why this awareness matters</h2>
             <p>This is not just a book campaign. It is an awareness mission for a hidden football problem.</p>
           </div>
         </div>
@@ -1267,7 +1227,7 @@
         <div class="section-head">
           <div>
             <h2>Sponsor packages</h2>
-            <p>These become stronger after the social proof wall has started to fill. First credibility, then funding.</p>
+            <p>Every package helps fund free books and awareness. Supporters can choose a fixed level or simply take part with any amount.</p>
           </div>
         </div>
 
@@ -1276,7 +1236,7 @@
             <span class="tag green-tag">For Everyone</span>
             <h3>Take Part Sponsor</h3>
             <div class="price">Any £</div>
-            <p class="muted">For anyone who wants to be part of the mission, even without much money to give.</p>
+            <p class="muted">For anyone who wants to help fund the free-books mission.</p>
             <ul>
               <li>No big amount needed</li>
               <li>Every contribution counts</li>
@@ -1385,10 +1345,10 @@
         <div class="section-head">
           <div>
             <h2>Sponsor leaderboard</h2>
-            <p>Sponsors can compete to fund more free books and more awareness. Public sponsors can be shown with name, business, URL and amount.</p>
+            <p>Paid sponsors can help fund more free books and more awareness. Public sponsors can be shown with name, business, URL and amount.</p>
           </div>
 
-          <a class="btn btn-gold" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Climb the Leaderboard</a>
+          <a class="btn btn-gold" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Support Free Books</a>
         </div>
 
         <div class="grid-2">
@@ -1402,9 +1362,9 @@
           </article>
 
           <article class="card">
-            <h3>How sponsors can be shown</h3>
+            <h3>How paid sponsors can be shown</h3>
             <p class="muted" style="margin-top: 8px;">
-              At checkout, sponsors can choose how their sponsorship appears on the page.
+              At checkout, paid sponsors can choose how their sponsorship appears on the page.
             </p>
 
             <div class="impact-list" style="margin-top: 16px;">
@@ -1470,7 +1430,7 @@
 
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Sponsor Any Amount</a>
-              <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">View the 12,000 Pixel Website</a>
+              <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">View the Awareness Wall</a>
             </div>
           </article>
 
@@ -1523,12 +1483,22 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <h2>Questions sponsors may ask</h2>
-            <p>Clear answers help sponsors trust the mission.</p>
+            <h2>Questions supporters may ask</h2>
+            <p>Clear answers help people understand the mission.</p>
           </div>
         </div>
 
         <div class="faq">
+          <details>
+            <summary>What is the 12,000 Pixel Website?</summary>
+            <p>It is a public awareness wall for businesses, clubs and community supporters who want to stand with the Colour Blindness in Football mission.</p>
+          </details>
+
+          <details>
+            <summary>Can businesses support the awareness wall?</summary>
+            <p>Yes. Businesses can appear on the 12,000 Pixel Website to show public awareness of the project. Paid sponsorship is separate and optional.</p>
+          </details>
+
           <details>
             <summary>Why is the goal 12,000 books?</summary>
             <p>The number 12 represents the commonly used estimate that around 1 in 12 males have colour vision deficiency. It also connects to the hidden Number 12 player theme in the mission.</p>
@@ -1540,18 +1510,8 @@
           </details>
 
           <details>
-            <summary>What is the best order?</summary>
-            <p>Start with the 12,000 Pixel Website to build social proof. Then use that credibility when approaching businesses for paid sponsorship of the free book mission.</p>
-          </details>
-
-          <details>
-            <summary>Can sponsors stay anonymous?</summary>
-            <p>Yes. Sponsors can choose public, anonymous or private when paying. Public sponsors may be listed with their name, business, URL and amount. Anonymous sponsors can be shown as Anonymous Sponsor. Private sponsors are not shown publicly.</p>
-          </details>
-
-          <details>
-            <summary>Can businesses help without spending money first?</summary>
-            <p>Yes. That is the purpose of the 12,000 Pixel Website. It gives businesses a simple awareness action first, then sponsorship can be discussed later once trust has been built.</p>
+            <summary>Can paid sponsors stay anonymous?</summary>
+            <p>Yes. Paid sponsors can choose public, anonymous or private when paying. Public sponsors may be listed with their name, business, URL and amount. Anonymous sponsors can be shown as Anonymous Sponsor. Private sponsors are not shown publicly.</p>
           </details>
 
           <details>
@@ -1570,17 +1530,17 @@
     <section>
       <div class="wrap">
         <div class="final-cta">
-          <h2>You do not need to be a big sponsor to help the hidden player.</h2>
+          <h2>Stand with the mission. Help the hidden player become visible.</h2>
 
           <p>
-            Build social proof first. Build credibility second. Then ask for sponsorship with more trust behind the project. Help players, parents, coaches, clubs and academies understand colour blindness in football before another player is misjudged for a picture they could not clearly see.
+            Join the awareness wall, support free books if you want to go further, and help players, parents, coaches, clubs and academies understand colour blindness in football before another player is misjudged for a picture they could not clearly see.
           </p>
 
           <div class="hero-actions" style="justify-content: center;">
-            <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part — Sponsor Any Amount</a>
             <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">View the 12,000 Pixel Website</a>
+            <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Support Free Books</a>
             <a class="btn btn-gold" href="https://buy.stripe.com/eVq5kw0BL1g86loeRGejK08" target="_blank" rel="noopener">Become a Founding Sponsor</a>
-            <a class="btn btn-dark" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Return to Main Page</a>
+            <a class="btn btn-dark" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Read the Book Page</a>
           </div>
         </div>
       </div>
@@ -1590,7 +1550,7 @@
   <footer class="footer">
     <div class="wrap">
       <strong>Colour Blindness in Football</strong> by Cornelius Aurelius<br />
-      Sponsor mission: free books, better awareness and practical support for colour-blind players, parents, coaches and clubs.
+      Awareness mission: free books, better understanding and practical support for colour-blind players, parents, coaches and clubs.
 
       <div class="footer-links" aria-label="Footer links">
         <a href="https://corneliusaurelius.com/" target="_blank" rel="noopener">CorneliusAurelius.com</a>
@@ -1604,19 +1564,7 @@
   </footer>
 
   <script>
-    /*
-      UPDATE THESE NUMBERS MANUALLY WHEN NEEDED:
-
-      fundingRaised = total sponsor money raised.
-      booksGivenAway = books actually delivered/given away.
-
-      Books funded estimate is calculated from fundingRaised / averageBookCost.
-    */
-
     const PIXEL_SITE_URL = "https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top";
-    const MAIN_BOOK_URL = "https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/";
-    const PROJECT_URL = "https://cornelius-aurelius.github.io/colour-blindness-in-football-project/";
-    const CORNELIUS_URL = "https://corneliusaurelius.com/";
 
     function repairBrokenLinks() {
       document.querySelectorAll("a").forEach((link) => {
@@ -1630,24 +1578,12 @@
       });
     }
 
-    repairBrokenLinks();
-
     const fundingGoal = 200000;
     const booksGoal = 12000;
     const averageBookCost = 15;
 
     const fundingRaised = 0;
     const booksGivenAway = 0;
-
-    /*
-      EDIT THIS LEADERBOARD WHEN SPONSORS JOIN.
-
-      Examples:
-      { name: "John Smith", amount: 25, note: "Supporter Sponsor" }
-      { name: "ABC Football Club", amount: 100, note: "Bronze Sponsor" }
-      { name: "www.example.com", amount: 250, note: "Silver Sponsor" }
-      { name: "Anonymous Sponsor", amount: 500, note: "Gold Sponsor" }
-    */
 
     const leaderboardSponsors = [
       { name: "Be the first sponsor", amount: 0, note: "Top position available" },
@@ -1734,6 +1670,7 @@
       board.innerHTML = Array.from({ length: pixels }, () => '<div class="pixel"></div>').join("");
     }
 
+    repairBrokenLinks();
     updateProgress();
     renderLeaderboard();
     renderPixelBoard();
