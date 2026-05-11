@@ -8,24 +8,40 @@
 
   <meta
     name="description"
-    content="Sponsor free copies of Colour Blindness in Football and help fund awareness of the hidden struggle colour-blind players can face in football."
+    content="Sponsor free copies of Colour Blindness in Football and help fund awareness of the hidden struggle colour-blind players can face in football. Take part, sponsor books, or upload your logo to the 12,000 Pixel Website."
   />
+
+  <meta name="author" content="Cornelius Aurelius" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#06110d" />
+
+  <meta property="og:title" content="Sponsor the 12,000 Free Books Mission" />
+  <meta property="og:description" content="Help make the hidden player visible. Sponsor free Colour Blindness in Football books, support awareness, or add your logo to the 12,000 Pixel Website." />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sponsor the 12,000 Free Books Mission" />
+  <meta name="twitter:description" content="Sponsor free books, fund awareness, and help colour-blind football players, parents, coaches and clubs." />
 
   <style>
     :root {
       --bg: #06110d;
       --bg2: #091a13;
+      --deep: #030806;
       --panel: rgba(255, 255, 255, 0.075);
       --panel2: rgba(255, 255, 255, 0.11);
       --text: #f4fff8;
       --muted: #b8d4c7;
+      --soft: #eafff1;
       --green: #38e07b;
       --lime: #b7ff4d;
       --gold: #ffd166;
       --orange: #ff8a3d;
       --blue: #66d9ff;
       --pink: #ff8bd1;
+      --red: #ff5d6c;
       --border: rgba(255, 255, 255, 0.14);
+      --border-strong: rgba(183, 255, 77, 0.32);
       --shadow: rgba(0, 0, 0, 0.35);
       --max: 1180px;
       --radius: 26px;
@@ -33,7 +49,10 @@
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      text-size-adjust: 100%;
+    }
 
     body {
       margin: 0;
@@ -42,12 +61,36 @@
         radial-gradient(circle at top left, rgba(56, 224, 123, 0.23), transparent 35%),
         radial-gradient(circle at top right, rgba(255, 209, 102, 0.16), transparent 32%),
         radial-gradient(circle at 60% 28%, rgba(255, 139, 209, 0.12), transparent 26%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 52%, #030806 100%);
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 52%, var(--deep) 100%);
       color: var(--text);
       line-height: 1.55;
+      overflow-x: hidden;
     }
 
     a { color: inherit; }
+
+    img, svg { max-width: 100%; }
+
+    ::selection {
+      background: rgba(183, 255, 77, 0.3);
+      color: white;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -80px;
+      z-index: 200;
+      padding: 12px 16px;
+      background: var(--lime);
+      color: #04100b;
+      border-radius: 999px;
+      font-weight: 950;
+      text-decoration: none;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus { top: 16px; }
 
     .wrap {
       width: min(var(--max), calc(100% - 32px));
@@ -60,11 +103,12 @@
       z-index: 100;
       background: rgba(6, 17, 13, 0.84);
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav {
-      min-height: 74px;
+      min-height: 76px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -77,18 +121,20 @@
       gap: 12px;
       font-weight: 950;
       letter-spacing: -0.02em;
+      text-decoration: none;
     }
 
     .badge {
-      width: 44px;
-      height: 44px;
-      border-radius: 15px;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
       background: linear-gradient(135deg, var(--lime), var(--green));
       display: grid;
       place-items: center;
       color: #06110d;
       font-weight: 1000;
       box-shadow: 0 16px 36px rgba(56, 224, 123, 0.23);
+      flex: 0 0 auto;
     }
 
     .brand small {
@@ -103,10 +149,10 @@
     .navlinks {
       display: flex;
       align-items: center;
-      gap: 13px;
+      gap: 12px;
       color: var(--muted);
       font-size: 14px;
-      font-weight: 800;
+      font-weight: 850;
     }
 
     .navlinks a {
@@ -114,7 +160,18 @@
       white-space: nowrap;
     }
 
-    .navlinks a:hover { color: white; }
+    .navlinks a:hover,
+    .navlinks a:focus-visible { color: white; }
+
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.055);
+    }
 
     .btn {
       display: inline-flex;
@@ -127,11 +184,18 @@
       text-decoration: none;
       font-weight: 950;
       cursor: pointer;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
       text-align: center;
     }
 
     .btn:hover { transform: translateY(-2px); }
+
+    .btn:focus-visible,
+    details:focus-within,
+    a:focus-visible {
+      outline: 3px solid rgba(183, 255, 77, 0.78);
+      outline-offset: 4px;
+    }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--lime), var(--green));
@@ -145,14 +209,26 @@
       box-shadow: 0 18px 46px rgba(255, 209, 102, 0.18);
     }
 
+    .btn-pixel {
+      background: linear-gradient(135deg, #ffffff, var(--blue));
+      color: #031016;
+      box-shadow: 0 18px 46px rgba(102, 217, 255, 0.16);
+    }
+
     .btn-dark {
       background: rgba(255, 255, 255, 0.08);
       color: white;
       border-color: var(--border);
     }
 
+    .btn-small {
+      min-height: 42px;
+      padding: 10px 14px;
+      font-size: 13px;
+    }
+
     .hero {
-      padding: 78px 0 42px;
+      padding: 76px 0 42px;
       overflow: hidden;
     }
 
@@ -211,6 +287,7 @@
     .highlight { color: var(--lime); font-weight: 950; }
     .pink { color: var(--pink); font-weight: 950; }
     .gold { color: var(--gold); font-weight: 950; }
+    .blue { color: var(--blue); font-weight: 950; }
 
     .hero-actions {
       display: flex;
@@ -236,18 +313,59 @@
         linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.045));
       padding: 26px;
       box-shadow: 0 28px 90px var(--shadow);
+      isolation: isolate;
     }
 
-    .giant-12 {
-      font-size: clamp(108px, 18vw, 190px);
-      line-height: 0.84;
+    .mission-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -70px -90px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255, 209, 102, 0.12);
+      filter: blur(2px);
+      z-index: -1;
+    }
+
+    .circle-12 {
+      position: relative;
+      width: min(100%, 410px);
+      aspect-ratio: 1;
+      margin: 14px auto 22px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(6,17,13,.92) 0 32%, transparent 33%),
+        conic-gradient(from 0deg, #d53e4f, #f46d43, #fdae61, #fee08b, #e6f598, #abdda4, #66c2a5, #3288bd, #5e4fa2, #d53e4f);
+      box-shadow:
+        inset 0 0 0 14px rgba(255, 255, 255, 0.06),
+        0 22px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    .circle-12::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border-radius: inherit;
+      border: 2px solid rgba(255, 255, 255, 0.24);
+      box-shadow: inset 0 0 34px rgba(0,0,0,.36);
+    }
+
+    .circle-12 strong {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(120px, 17vw, 198px);
+      line-height: 0.8;
       font-weight: 1000;
-      letter-spacing: -0.08em;
-      background: linear-gradient(135deg, var(--lime), var(--green), #f8ffb5);
+      letter-spacing: -0.11em;
+      padding-right: 0.08em;
+      background: linear-gradient(135deg, #ffffff, var(--lime), var(--green));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      margin: 10px 0 14px;
+      text-shadow: 0 16px 42px rgba(0,0,0,.35);
     }
 
     .stat-label {
@@ -287,6 +405,29 @@
       color: var(--muted);
       font-size: 13px;
       font-weight: 750;
+    }
+
+    .notice-strip {
+      padding: 16px 0 0;
+    }
+
+    .notice-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      border: 1px solid rgba(102, 217, 255, 0.22);
+      background:
+        radial-gradient(circle at left, rgba(102, 217, 255, 0.15), transparent 35%),
+        rgba(255, 255, 255, 0.06);
+      border-radius: 24px;
+      padding: 16px;
+    }
+
+    .notice-card strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 3px;
     }
 
     section { padding: 42px 0; }
@@ -332,9 +473,7 @@
       padding: 24px;
     }
 
-    .stats-section {
-      padding-top: 18px;
-    }
+    .stats-section { padding-top: 18px; }
 
     .stats-panel {
       border: 1px solid rgba(183, 255, 77, 0.24);
@@ -388,6 +527,7 @@
       background: rgba(183, 255, 77, 0.12);
       border: 1px solid rgba(183, 255, 77, 0.23);
       font-size: 22px;
+      flex: 0 0 auto;
     }
 
     .goal-number {
@@ -505,6 +645,12 @@
       border: 1px solid rgba(183, 255, 77, 0.24);
     }
 
+    .tag.blue-tag {
+      color: #dff8ff;
+      background: rgba(102, 217, 255, 0.14);
+      border: 1px solid rgba(102, 217, 255, 0.24);
+    }
+
     .price {
       font-size: 44px;
       line-height: 1;
@@ -513,18 +659,66 @@
       margin-top: 4px;
     }
 
-    .package ul {
+    .package ul,
+    .clean-list {
       margin: 0;
       padding-left: 18px;
       color: var(--muted);
     }
 
-    .package li { margin-bottom: 8px; }
+    .package li,
+    .clean-list li { margin-bottom: 8px; }
 
-    .package .btn {
-      margin-top: auto;
-      width: 100%;
+    .package .btn { margin-top: auto; width: 100%; }
+
+    .pixel-section-card {
+      border-radius: 34px;
+      border: 1px solid rgba(102, 217, 255, 0.28);
+      background:
+        radial-gradient(circle at top left, rgba(102, 217, 255, 0.16), transparent 36%),
+        radial-gradient(circle at bottom right, rgba(183, 255, 77, 0.11), transparent 34%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
+      padding: 28px;
+      box-shadow: 0 26px 90px rgba(0,0,0,.22);
     }
+
+    .pixel-grid {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .pixel-preview {
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,.22);
+      border-radius: 28px;
+      padding: 18px;
+    }
+
+    .pixel-board {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 4px;
+      aspect-ratio: 1;
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255,255,255,.08);
+      padding: 8px;
+    }
+
+    .pixel {
+      border-radius: 5px;
+      min-width: 0;
+      background: rgba(255,255,255,.1);
+    }
+
+    .pixel:nth-child(6n+1) { background: rgba(183,255,77,.75); }
+    .pixel:nth-child(6n+2) { background: rgba(56,224,123,.72); }
+    .pixel:nth-child(6n+3) { background: rgba(255,209,102,.78); }
+    .pixel:nth-child(6n+4) { background: rgba(102,217,255,.72); }
+    .pixel:nth-child(6n+5) { background: rgba(255,139,209,.68); }
+    .pixel:nth-child(6n+6) { background: rgba(255,138,61,.74); }
 
     .impact-list {
       display: grid;
@@ -654,73 +848,115 @@
 
     .footer strong { color: white; }
 
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: white;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.055);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-weight: 850;
+    }
+
     .watermark {
       margin-top: 18px;
-      opacity: 0.34;
+      opacity: 0.72;
       letter-spacing: 0.14em;
       font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+
     @media (max-width: 1050px) {
       .packages { grid-template-columns: repeat(2, 1fr); }
       .hero-grid,
       .grid-2,
-      .meaning-grid { grid-template-columns: 1fr; }
+      .meaning-grid,
+      .pixel-grid { grid-template-columns: 1fr; }
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .circle-12 { width: min(100%, 360px); }
+    }
+
+    @media (max-width: 860px) {
+      .navlinks { display: none; }
+      .hero { padding-top: 52px; }
+      .notice-card { align-items: stretch; flex-direction: column; }
+      .notice-card .btn { width: 100%; }
     }
 
     @media (max-width: 780px) {
-      .navlinks { display: none; }
-
-      .hero { padding-top: 52px; }
-
       .grid-3,
       .grid-4,
       .packages,
       .mini-grid { grid-template-columns: 1fr; }
 
       .section-head { display: block; }
-
       .section-head .btn { margin-top: 16px; }
 
       .hero-actions,
-      .hero-actions .btn { width: 100%; }
+      .hero-actions .btn,
+      .btn { width: 100%; }
 
       .leader-row { grid-template-columns: 44px 1fr; }
-
       .leader-amount { grid-column: 2; }
 
-      .btn { width: 100%; }
+      .stat-card { min-height: auto; }
+      .stats-panel,
+      .pixel-section-card { padding: 20px; border-radius: 26px; }
+      .card { padding: 20px; }
+    }
+
+    @media (max-width: 420px) {
+      .wrap { width: min(var(--max), calc(100% - 22px)); }
+      h1 { font-size: 42px; }
+      .brand { font-size: 14px; }
+      .brand small { font-size: 11px; }
+      .badge { width: 42px; height: 42px; }
+      .circle-12 strong { font-size: 118px; }
     }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <header class="topbar">
     <div class="wrap nav">
-      <div class="brand">
+      <a class="brand" href="#top" aria-label="Colour Blindness in Football sponsor mission home">
         <div class="badge">12</div>
         <div>
           Colour Blindness in Football
           <small>Sponsor the Hidden Player</small>
         </div>
-      </div>
+      </a>
 
-      <nav class="navlinks">
-        <a href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Return to Main Page</a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Main Book Page</a>
         <a href="#stats">Stats</a>
         <a href="#goals">Goals</a>
         <a href="#packages">Packages</a>
-        <a href="#leaderboard">Leaderboard</a>
-        <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part</a>
+        <a class="nav-pill" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#upload" target="_blank" rel="noopener">🧩 Pixel Website</a>
+        <a class="btn btn-primary btn-small" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
+  <main id="main">
+    <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
           <div class="eyebrow">The 12,000 Free Books Mission</div>
@@ -741,6 +977,7 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part — Sponsor Any Amount</a>
+            <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#upload" target="_blank" rel="noopener">Upload Logo to Pixel Website</a>
             <a class="btn btn-gold" href="#packages">View Sponsor Packages</a>
             <a class="btn btn-dark" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Return to Main Page</a>
           </div>
@@ -750,9 +987,12 @@
           </p>
         </div>
 
-        <aside class="mission-card">
+        <aside class="mission-card" aria-label="Why 12,000 matters">
           <div class="stat-label">Why 12,000?</div>
-          <div class="giant-12">12</div>
+
+          <div class="circle-12" aria-hidden="true">
+            <strong>12</strong>
+          </div>
 
           <h2>1 in 12 is the number behind the book goal.</h2>
 
@@ -774,6 +1014,18 @@
         </aside>
       </div>
     </section>
+
+    <div class="notice-strip">
+      <div class="wrap">
+        <div class="notice-card">
+          <div>
+            <strong>New sponsor route: add your logo to the 12,000 Pixel Website.</strong>
+            <p class="muted">Sponsors can also support the awareness wall by uploading a logo and link for review.</p>
+          </div>
+          <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#upload" target="_blank" rel="noopener">Open Pixel Website Upload</a>
+        </div>
+      </div>
+    </div>
 
     <section id="stats" class="stats-section">
       <div class="wrap">
@@ -842,7 +1094,7 @@
 
             <div class="goal-number" id="fundingText">£0 / £200,000</div>
 
-            <div class="progress-wrap">
+            <div class="progress-wrap" aria-hidden="true">
               <div class="progress-bar gold" id="fundingBar"></div>
             </div>
 
@@ -858,7 +1110,7 @@
 
             <div class="goal-number" id="fundedBooksText">0 / 12,000</div>
 
-            <div class="progress-wrap">
+            <div class="progress-wrap" aria-hidden="true">
               <div class="progress-bar" id="fundedBooksBar"></div>
             </div>
 
@@ -874,7 +1126,7 @@
 
             <div class="goal-number" id="givenBooksText">0 / 12,000</div>
 
-            <div class="progress-wrap">
+            <div class="progress-wrap" aria-hidden="true">
               <div class="progress-bar blue" id="givenBooksBar"></div>
             </div>
 
@@ -883,6 +1135,41 @@
               <span>Represents 1 in 12</span>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pixel-website">
+      <div class="wrap">
+        <div class="pixel-section-card">
+          <div class="pixel-grid">
+            <div class="pixel-preview" aria-hidden="true">
+              <div class="pixel-board" id="pixelBoard"></div>
+            </div>
+
+            <div>
+              <span class="tag blue-tag">Added Link</span>
+              <h2 style="margin-top: 12px;">Sponsor the mission on the 12,000 Pixel Website</h2>
+              <p class="big" style="margin-top: 14px;">
+                The Pixel Website gives supporters another visual way to take part. Sponsors can upload a logo and link, then the supporter can be reviewed before being added to the awareness board.
+              </p>
+
+              <ul class="clean-list">
+                <li>Use this for sponsor logos, business links and supporter visibility.</li>
+                <li>Keep the 12,000 theme connected across both sites.</li>
+                <li>Good for businesses that want a simple public link back.</li>
+              </ul>
+
+              <div class="hero-actions">
+                <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#upload" target="_blank" rel="noopener">Upload Logo + Link</a>
+                <a class="btn btn-dark" href="mailto:corneliusaureliush@gmail.com?subject=THE%2012000%20PIXEL%20SITE%20-%20LOGO%20%2B%20LINK">Email Logo + Link</a>
+              </div>
+
+              <p class="small-note">
+                Email subject is pre-filled as: THE 12000 PIXEL SITE - LOGO + LINK
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1163,6 +1450,7 @@
 
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Sponsor Any Amount</a>
+              <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#upload" target="_blank" rel="noopener">Add Logo to Pixel Website</a>
             </div>
           </article>
 
@@ -1242,6 +1530,11 @@
           </details>
 
           <details>
+            <summary>Can sponsors add a logo?</summary>
+            <p>Yes. Sponsors can use the 12,000 Pixel Website upload link to submit a logo and link for review before being added to the awareness board.</p>
+          </details>
+
+          <details>
             <summary>Is this only for boys?</summary>
             <p>No. Colour blindness is more common in boys, but girls can be colour blind too. When a girl is affected, the football barrier is just as real and deserves the same support, dignity and visibility.</p>
           </details>
@@ -1260,11 +1553,12 @@
           <h2>You do not need to be a big sponsor to help the hidden player.</h2>
 
           <p>
-            Sponsor free books. Fund awareness. Take part with any amount. Help players, parents, coaches, clubs and academies understand colour blindness in football before another player is misjudged for a picture they could not clearly see.
+            Sponsor free books. Fund awareness. Add your logo to the 12,000 Pixel Website. Help players, parents, coaches, clubs and academies understand colour blindness in football before another player is misjudged for a picture they could not clearly see.
           </p>
 
           <div class="hero-actions" style="justify-content: center;">
             <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Take Part — Sponsor Any Amount</a>
+            <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#upload" target="_blank" rel="noopener">Upload Logo to Pixel Website</a>
             <a class="btn btn-gold" href="https://buy.stripe.com/eVq5kw0BL1g86loeRGejK08" target="_blank" rel="noopener">Become a Founding Sponsor</a>
             <a class="btn btn-dark" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Return to Main Page</a>
           </div>
@@ -1277,6 +1571,14 @@
     <div class="wrap">
       <strong>Colour Blindness in Football</strong> by Cornelius Aurelius<br />
       Sponsor mission: free books, better awareness and practical support for colour-blind players, parents, coaches and clubs.
+
+      <div class="footer-links" aria-label="Footer links">
+        <a href="https://corneliusaurelius.com/" target="_blank" rel="noopener">CorneliusAurelius.com</a>
+        <a href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Main Book Page</a>
+        <a href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/#top">Project Page</a>
+        <a href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#upload" target="_blank" rel="noopener">12,000 Pixel Website Upload</a>
+      </div>
+
       <div class="watermark">CORNELIUSAURELIUS.COM</div>
     </div>
   </footer>
@@ -1331,6 +1633,15 @@
       return Math.min(100, Math.max(0, (value / goal) * 100));
     }
 
+    function safeText(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
     function updateProgress() {
       const fundedBooks = Math.floor(fundingRaised / averageBookCost);
 
@@ -1355,6 +1666,7 @@
 
     function renderLeaderboard() {
       const list = document.getElementById("leaderboardList");
+      if (!list) return;
 
       const sorted = [...leaderboardSponsors]
         .sort((a, b) => b.amount - a.amount)
@@ -1366,8 +1678,8 @@
           <div class="leader-row">
             <div class="rank">${index + 1}</div>
             <div>
-              <div class="leader-name">${sponsor.name}</div>
-              <div class="leader-note">${sponsor.note || "Sponsor supporter"}</div>
+              <div class="leader-name">${safeText(sponsor.name)}</div>
+              <div class="leader-note">${safeText(sponsor.note || "Sponsor supporter")}</div>
             </div>
             <div class="leader-amount">${amountText}</div>
           </div>
@@ -1375,8 +1687,17 @@
       }).join("");
     }
 
+    function renderPixelBoard() {
+      const board = document.getElementById("pixelBoard");
+      if (!board) return;
+
+      const pixels = 144;
+      board.innerHTML = Array.from({ length: pixels }, () => '<div class="pixel"></div>').join("");
+    }
+
     updateProgress();
     renderLeaderboard();
+    renderPixelBoard();
   </script>
 </body>
 </html>
