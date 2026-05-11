@@ -1613,6 +1613,25 @@
       Books funded estimate is calculated from fundingRaised / averageBookCost.
     */
 
+    const PIXEL_SITE_URL = "https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top";
+    const MAIN_BOOK_URL = "https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/";
+    const PROJECT_URL = "https://cornelius-aurelius.github.io/colour-blindness-in-football-project/";
+    const CORNELIUS_URL = "https://corneliusaurelius.com/";
+
+    function repairBrokenLinks() {
+      document.querySelectorAll("a").forEach((link) => {
+        const rawHref = link.getAttribute("href") || "";
+        const brokenPlaceholder = rawHref === "$1" || rawHref.endsWith("/$1") || rawHref.includes("%241");
+        if (brokenPlaceholder) {
+          link.setAttribute("href", PIXEL_SITE_URL);
+          link.setAttribute("target", "_blank");
+          link.setAttribute("rel", "noopener");
+        }
+      });
+    }
+
+    repairBrokenLinks();
+
     const fundingGoal = 200000;
     const booksGoal = 12000;
     const averageBookCost = 15;
