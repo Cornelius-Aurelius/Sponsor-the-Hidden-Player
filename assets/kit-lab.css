@@ -1,0 +1,54 @@
+/* Sponsor site educational enhancement by Cornelius Aurelius */
+#signal-challenge{position:relative;isolation:isolate;scroll-margin-top:100px;margin:24px 0 52px}
+.signal-shell{border:1px solid rgba(147,255,209,.42);border-radius:30px;background:radial-gradient(ellipse at 86% 4%,rgba(43,195,158,.25),transparent 43%),linear-gradient(150deg,#102a2b 0%,#071920 54%,#081c1c 100%);box-shadow:0 22px 62px rgba(0,0,0,.38),inset 0 1px 0 rgba(242,255,244,.14);padding:clamp(20px,4.5vw,52px);overflow:hidden}
+.signal-intro{display:flex;gap:20px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.signal-chip{display:inline-block;border:1px solid rgba(183,255,77,.6);color:#d5ff86;letter-spacing:.12em;font-size:.72rem;font-weight:800;padding:7px 13px;border-radius:999px;text-transform:uppercase}
+.signal-intro h2{margin:14px 0 10px;font-size:clamp(1.65rem,4vw,3.2rem);line-height:1.07;color:#fff;letter-spacing:-.04em}
+.signal-intro p{color:#d5e6e3;max-width:720px;font-size:1.04rem}
+.signal-intro .signal-meta{padding:10px 14px;border-radius:14px;border:1px solid rgba(180,235,227,.24);color:#d7ffe9;font-weight:700}
+.signal-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,3vw,36px);align-items:stretch;margin-top:28px}
+.signal-card{background:rgba(0,10,18,.49);border-radius:22px;border:1px solid rgba(165,225,219,.19);padding:clamp(16px,2.5vw,28px)}
+.signal-card h3{font-size:clamp(1.12rem,2.2vw,1.5rem);margin:0 0 12px;color:#fbfffc}
+.signal-small{color:#bed1d2;font-size:.93rem;line-height:1.5}
+.signal-stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.signal-stat{background:rgba(90,255,208,.07);border:1px solid rgba(140,255,217,.18);padding:8px 12px;border-radius:12px;color:#f1fffd;font-variant-numeric:tabular-nums}
+.signal-stat span{display:block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#c3dfd5}
+.signal-stat strong{font-size:1.2rem}
+.signal-progress{height:7px;border-radius:12px;background:#31524c;overflow:hidden;margin-bottom:12px}
+.signal-progress>span{height:100%;display:block;background:linear-gradient(90deg,#c4ff5b,#55ecdb);transition:width .24s ease}
+#signal-topic{font-size:.82rem;color:#abffcf;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+#signal-prompt{font-size:clamp(1.09rem,2vw,1.36rem);line-height:1.37;font-weight:800;margin:10px 0 18px;min-height:2.6em}
+#signal-answers{display:grid;gap:10px}
+.signal-option{display:block;width:100%;text-align:left;padding:14px 17px;border:1px solid rgba(195,230,235,.34);background:#123338;color:#f5fffc;border-radius:12px;font-weight:680;font-size:1rem;line-height:1.4;cursor:pointer;min-height:52px;transition:background .15s,border-color .15s,transform .15s}
+.signal-option:not(:disabled):hover{background:#215451;transform:translateY(-2px);border-color:#b7ff4d}
+.signal-option:focus-visible,#signal-challenge button:focus-visible{outline:3px solid #fbda69;outline-offset:3px}
+.signal-option.is-correct{background:#164c3d;border:2px solid #a8ff86}
+.signal-option.is-wrong{background:#522a38;border:2px solid #ffa6b6}
+.signal-option:disabled{cursor:default}
+.signal-result{margin-top:16px;padding:14px;border-radius:12px;border:1px solid #7bddc0;background:rgba(46,165,138,.13);color:#f1fff9}
+.signal-result.incorrect{border-color:#ffcc87;background:rgba(130,88,40,.17)}
+.signal-result strong{display:block;font-size:1.05rem;margin-bottom:4px}
+.signal-cta{display:inline-flex;min-height:48px;padding:12px 18px;margin-top:14px;border-radius:12px;border:1px solid #b6ff64;background:#b7ff4d;color:#0b221c;font-weight:850;align-items:center;justify-content:center;cursor:pointer}
+.signal-cta.secondary{background:#17413e;color:white}
+.signal-finish{padding:12px 0;color:#d7ece6}
+#signal-next[hidden],#signal-result[hidden],#signal-ending[hidden]{display:none}
+.kit-pitch{position:relative;height:230px;border:5px solid #7cad70;border-radius:17px;background:repeating-linear-gradient(90deg,#2b603f 0 28px,#285939 28px 56px);overflow:hidden;box-shadow:inset 0 0 0 2px #b4d5a6;display:grid;grid-template-columns:1fr 1fr;align-items:center;justify-items:center;gap:14px;padding:20px}
+.kit-pitch:before{content:'';position:absolute;border:2px solid rgba(230,255,216,.56);height:100%;left:50%;transform:translateX(-50%)}
+.kit-pitch:after{content:'';position:absolute;border:2px solid rgba(230,255,216,.56);width:67px;height:67px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}
+.kit-player{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:11px;max-width:100%}
+.kit-shirt{width:clamp(88px,11vw,126px);height:105px;clip-path:polygon(22% 3%,34% 0,40% 6%,60% 6%,66% 0,78% 3%,100% 20%,88% 46%,79% 41%,79% 100%,21% 100%,21% 41%,12% 46%,0 20%);display:grid;place-items:center;border:3px solid rgba(255,255,255,.18);filter:drop-shadow(0 10px 12px rgba(0,0,0,.35))}
+.kit-shirt span{font-size:1.7rem;font-weight:1000;color:#fff;text-shadow:0 2px 3px #000,0 0 9px #000;opacity:0}
+.kit-player small{font-size:.86rem;color:#f4fff3;letter-spacing:.04em;background:#123a2f;padding:4px 8px;border-radius:5px;font-weight:800}
+.kit-player.a .kit-shirt{background:#a53236}.kit-player.b .kit-shirt{background:#568a3b}
+.kit-pitch[data-cues=on] .kit-player.a .kit-shirt{background:repeating-linear-gradient(105deg,#203765 0 19px,#405ca6 19px 31px)}
+.kit-pitch[data-cues=on] .kit-player.b .kit-shirt{background:#f1efcd;outline:3px solid #fff}
+.kit-pitch[data-cues=on] .kit-player.b .kit-shirt span{color:#101b21;text-shadow:none}
+.kit-pitch[data-cues=on] .kit-shirt span{opacity:1}
+.kit-pitch[data-cues=on] .kit-player.a small{background:#203765}.kit-pitch[data-cues=on] .kit-player.b small{background:#f1efcd;color:#182326}
+.kit-legend{font-size:.82rem;color:#eff9e7;min-height:2.5em;margin:14px 0 10px}
+.signal-credit{font-size:.86rem;color:#d3e6e1;margin-top:20px;line-height:1.5}
+.signal-credit a{color:#d2ff7b;text-decoration:underline;text-underline-offset:3px}
+#signal-challenge button{font-family:inherit}
+@media(max-width:820px){.signal-content{grid-template-columns:1fr}.kit-pitch{height:220px}.signal-intro{display:block}.signal-intro .signal-meta{margin-top:16px;display:inline-block}}
+@media(max-width:390px){.signal-shell{padding:17px 13px;border-radius:21px}.signal-card{padding:14px}.kit-shirt{width:87px}.signal-stats{gap:5px}.signal-stat{padding:8px}}
+@media(prefers-reduced-motion:reduce){.signal-option,.signal-progress>span{transition:none}}

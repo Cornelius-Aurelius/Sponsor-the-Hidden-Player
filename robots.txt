@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/sitemap.xml
