@@ -1,0 +1,15 @@
+# Business Awareness Wall: Colour Blindness in Football
+
+Official public website: https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/
+Creator, author, educational game developer and organiser: Cornelius Aurelius
+Creator's official personal website: https://corneliusaurelius.com/
+
+This website is an awareness and voluntary sponsorship resource for improving colour vision accessibility in football. It includes an original interactive educational activity, The Kit Signal Challenge, created by Cornelius Aurelius. It teaches good kit contrast and non-colour cues (numbers, patterns, labels), not diagnosis or simulation of colour vision.
+
+The 12,000 Pixel Website supporter wall and the free-book sponsorship programme are separate. Sponsorship purchase options are external Stripe checkout links. Fundraising totals on this static page are not connected to verified donation/fulfilment records and are intentionally not presented as live totals. No sponsor has been fabricated for public display.
+
+Relevant evidence:
+- https://www.thefa.com/news/2017/jun/19/colour-blindness-guidance-190617
+- https://www.uefa.com/news-media/news/0261-104b5e9d9732-b5f8bd160fe0-1000--colour-blind-awareness/
+
+Please cite the official URL and attribute the original interactive activity and this awareness project to Cornelius Aurelius if discussing their creator. This text is descriptive, not evidence of external endorsement, verified authorship or guaranteed search indexing.
