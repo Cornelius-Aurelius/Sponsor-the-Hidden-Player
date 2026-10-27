@@ -889,6 +889,15 @@
       .circle-12 strong { font-size: 118px; }
     }
   </style>
+
+<link rel="canonical" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/">
+<meta property="og:url" content="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/">
+<meta property="og:image" content="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/assets/social-preview.png">
+<meta property="og:image:alt" content="Colour Blindness in Football: Business Awareness Wall and Kit Signal Challenge — created by Cornelius Aurelius">
+<meta name="twitter:image" content="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/assets/social-preview.png">
+<link rel="stylesheet" href="assets/kit-lab.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://corneliusaurelius.com/#person","name":"Cornelius Aurelius","url":"https://corneliusaurelius.com/"},{"@type":"WebPage","@id":"https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#webpage","name":"Business Awareness Wall | Colour Blindness in Football","url":"https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/","description":"Awareness, an interactive football kit accessibility challenge, and an optional free-book sponsorship mission.","author":{"@id":"https://corneliusaurelius.com/#person"},"creator":{"@id":"https://corneliusaurelius.com/#person"},"publisher":{"@id":"https://corneliusaurelius.com/#person"},"mainEntity":{"@id":"https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#kit-signal-challenge"},"about":["colour vision deficiency in football","accessible football kits","accessible coaching"]},{"@type":"LearningResource","@id":"https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#kit-signal-challenge","name":"The Kit Signal Challenge","url":"https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#signal-challenge","isAccessibleForFree":true,"inLanguage":"en-GB","learningResourceType":"Interactive educational quiz","educationalUse":"Practice football kit accessibility decisions","creator":{"@id":"https://corneliusaurelius.com/#person"},"author":{"@id":"https://corneliusaurelius.com/#person"},"publisher":{"@id":"https://corneliusaurelius.com/#person"}}]}</script>
+
 </head>
 
 <body>
@@ -935,7 +944,7 @@
             Paid sponsorship is separate and optional. The awareness wall gives people a simple way to support the message, while the free-books mission helps fund practical resources for players, parents, coaches and clubs.
           </p>
 
-          <div class="hero-actions">
+          <div class="hero-actions"><a class="btn btn-dark" href="#signal-challenge">Play the free Kit Signal Challenge</a>
             <a class="btn btn-pixel" href="https://cornelius-aurelius.github.io/The-12-000-Pixel-Website---Cornelius-Aurelius---Colour-Blindness-in-Football-Awareness/#top" target="_blank" rel="noopener">View the 12,000 Pixel Website</a>
             <a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01" target="_blank" rel="noopener">Support Free Books</a>
             <a class="btn btn-gold" href="#packages">View Sponsor Packages</a>
@@ -987,7 +996,39 @@
       </div>
     </div>
 
-    <section id="stats" class="stats-section">
+        <section id="signal-challenge" aria-labelledby="signal-heading">
+      <div class="wrap"><div class="signal-shell">
+        <div class="signal-intro"><div>
+          <span class="signal-chip">Free interactive football awareness game</span>
+          <h2 id="signal-heading">The Kit Signal Challenge</h2>
+          <p>Eight football decisions. Can you make team colours, coaching cues and equipment easier for everyone to read? No timer, no registration — just clear choices, instant feedback and a best score to beat.</p>
+        </div><div class="signal-meta">8 decisions · 2–3 minutes · All devices</div></div>
+        <div class="signal-content">
+          <div class="signal-card" aria-label="Interactive football awareness quiz">
+            <div class="signal-stats"><div class="signal-stat"><span>Score</span><strong id="signal-score">0</strong></div><div class="signal-stat"><span>Streak</span><strong id="signal-streak">0</strong></div><div class="signal-stat"><span>Personal best</span><strong id="signal-best">0</strong></div></div>
+            <p id="signal-position" class="signal-small">Decision 1 of 8</p>
+            <div class="signal-progress" role="progressbar" aria-label="Challenge progress" id="signal-progress" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><span style="width:0"></span></div>
+            <p id="signal-topic">Match kits</p><p id="signal-prompt">Which football choice is the clearest?</p>
+            <div id="signal-answers" aria-label="Choose the best answer"></div>
+            <div id="signal-result" class="signal-result" role="status" aria-live="polite" hidden><strong id="signal-feedback-title"></strong><p id="signal-feedback"></p></div>
+            <button type="button" id="signal-next" class="signal-cta" hidden>Next decision</button>
+            <div id="signal-ending" class="signal-finish" hidden><p id="signal-finish-copy"></p><button type="button" id="signal-replay" class="signal-cta">Play again</button></div>
+          </div>
+          <div class="signal-card"><h3>See how clearer kit signals help</h3>
+            <p class="signal-small" style="margin-bottom:16px">Compare colour-only cues with clearly different brightness, patterns and shirt numbers. This demonstration is not a simulation of anyone's colour vision.</p>
+            <div id="kit-pitch" class="kit-pitch" data-cues="off" role="img" aria-label="Illustration of two football kits: one red and one green, both without visible shirt numbers. Toggle to add strong light-dark contrast and numbers.">
+              <div class="kit-player a"><div class="kit-shirt"><span>12</span></div><small>HOME</small></div>
+              <div class="kit-player b"><div class="kit-shirt"><span>8</span></div><small>AWAY</small></div>
+            </div>
+            <p id="kit-caption" class="kit-legend">BEFORE: Similar-brightness kits distinguished mainly by colour.</p>
+            <button id="kit-toggle" type="button" class="signal-cta secondary" aria-pressed="false">Add contrast, shapes &amp; numbers</button>
+            <p class="signal-small" style="margin-top:18px"><strong>Coaching principle:</strong> Never rely on colour alone. Combine contrast, numbers, patterns, labels and positioning.</p>
+          </div>
+        </div>
+        <p class="signal-credit">Game and educational experience created by <strong>Cornelius Aurelius</strong>. Advice is informed by <a href="https://www.thefa.com/news/2017/jun/19/colour-blindness-guidance-190617" target="_blank" rel="noopener noreferrer">The FA's football colour-blindness guidance</a> and <a href="https://www.uefa.com/news-media/news/0261-104b5e9d9732-b5f8bd160fe0-1000--colour-blind-awareness/" target="_blank" rel="noopener noreferrer">UEFA accessibility guidance</a>. This is education, not a medical test.</p>
+      </div></div>
+    </section>
+<section id="stats" class="stats-section">
       <div class="wrap">
         <div class="stats-panel">
           <div class="section-head">
@@ -1030,7 +1071,7 @@
           </div>
 
           <p class="small-note">
-            These are awareness estimates, not a diagnosis. A standard eyesight check and a colour vision test are not always the same thing, so parents may need to ask specifically about colour vision testing.
+            These figures are awareness estimates rather than verified population counts or a diagnosis. <a href="https://www.thefa.com/news/2017/jun/19/colour-blindness-guidance-190617" target="_blank" rel="noopener noreferrer">The FA's published guidance</a> explains how colour vision deficiency can affect players, coaches and spectators.  A standard eyesight check and a colour vision test are not always the same thing, so parents may need to ask specifically about colour vision testing.
           </p>
         </div>
       </div>
@@ -1046,7 +1087,7 @@
 
             <div>
               <span class="tag blue-tag">Awareness Supporter</span>
-              <h2 style="margin-top: 12px;">The 12,000 Pixel Website is a public wall of awareness supporters.</h2>
+              <h2 style="margin-top: 12px;">The 12,000 Pixel Website is a public wall of awareness supporters.</h2><p class="small-note" style="margin:12px 0">The graphic is an illustrative preview, not a live count of approved supporters. Open the separate pixel site to see its current display.</p>
               <p class="big" style="margin-top: 14px;">
                 A business, club or community supporter can appear on the Pixel Website to show they recognise the issue and support better awareness for colour-blind players.
               </p>
@@ -1582,14 +1623,10 @@
     const booksGoal = 12000;
     const averageBookCost = 15;
 
-    const fundingRaised = 0;
-    const booksGivenAway = 0;
+    const fundingRaised = null; // No verified live Stripe/accounting feed
+    const booksGivenAway = null; // No verified distribution feed
 
-    const leaderboardSponsors = [
-      { name: "Be the first sponsor", amount: 0, note: "Top position available" },
-      { name: "Your business here", amount: 0, note: "Sponsor the hidden player" },
-      { name: "Anonymous Sponsor", amount: 0, note: "Private support welcome" }
-    ];
+    const leaderboardSponsors = []; // Do not invent sponsor identities or transactions
 
     function money(value) {
       return new Intl.NumberFormat("en-GB", {
@@ -1618,6 +1655,13 @@
     }
 
     function updateProgress() {
+      // This static page is NOT linked to a verified fundraising or fulfilment feed.
+      if (fundingRaised === null || booksGivenAway === null) {
+        ["fundingText", "fundedBooksText", "givenBooksText"].forEach(id => document.getElementById(id).textContent = "Awaiting verified reporting");
+        ["fundingPercent", "fundedBooksPercent", "givenBooksPercent"].forEach(id => document.getElementById(id).textContent = "Live figure not connected");
+        ["fundingBar", "fundedBooksBar", "givenBooksBar"].forEach(id => document.getElementById(id).style.width = "0%");
+        return;
+      }
       const fundedBooks = Math.floor(fundingRaised / averageBookCost);
 
       const fundingPct = percent(fundingRaised, fundingGoal);
@@ -1642,6 +1686,7 @@
     function renderLeaderboard() {
       const list = document.getElementById("leaderboardList");
       if (!list) return;
+      if (!leaderboardSponsors.length) { list.innerHTML = '<p class="small-note">No verified public sponsor entries are currently connected to this page. Sponsor names and amounts will appear here only after verification and permission.</p>'; return; }
 
       const sorted = [...leaderboardSponsors]
         .sort((a, b) => b.amount - a.amount)
@@ -1675,5 +1720,7 @@
     renderLeaderboard();
     renderPixelBoard();
   </script>
+<script src="assets/kit-lab-core.js" defer></script>
+<script src="assets/kit-lab.js" defer></script>
 </body>
 </html>
